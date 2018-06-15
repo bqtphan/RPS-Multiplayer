@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Trivia Game</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron text-white rounded bg-dark">
+    <h1>Rock Paper Scissors</h1>
+  </div>
+  <div class="row" id="nameCard">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <div class="card" style="width:100%">
+        <div class="card-body">
+          <form>
+            <h4 style="text-align: center">Who are you?</h4>
+            <input type="text" id="inputName" style="width:100%">
+          </form>
+          <button id="submitName" style="width:30%">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="gameCard">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">
+            <span id="playerOne">Player One</span>
+          </h4>
+          <h6 style="text-align: center" id="playerOneText">Waiting for Player Two</h6>
+          <div class="rpsButtons">
+            <button data-choice="rock" class="btn btn-outline-dark" style='width:100%'>Rock</button>
+            <button data-choice="paper" class="btn btn-outline-dark" style='width:100%'>Paper</button>
+            <button data-choice="scissors" class="btn btn-outline-dark" style='width:100%'>Scissors</button>
+          </div>
+          <h6 style="text-align: center" class="playerWinLoss">Wins:
+            <span id="playerOneWins">0</span>
+            <br>Losses:
+            <span id="playerOneLoss">0</span>
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4" id="result">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title" id="centerTitle">Ready</h4>
+          <h6 style="text-align: center">
+            <span id="centerText">Make a move!</span>
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">
+            <span id="playerTwo">Player Two</span>
+          </h3>
+          <h6 style="text-align: center" id="playerTwoText">Waiting for Player One</h6>
+          <h6 style="text-align: center" class="playerWinLoss">Wins:
+            <span id="playerTwoWins">0</span>
+            <br>Losses:
+            <span id="playerTwoLoss">0</span>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <div class="card" style="width:100%">
+        <div class="card-body">
+          <h5 class="card-title">Chatbox</h5>
+          <table class="table table-hover" id="chatbox">
+            <thead>
+              <tr>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <form>
+            <input type="chatText" style="width:100%">
+          </form>
+          <button id="chatSubmit" style="width:30%">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="assets/javascript/script.js"></script>
+</body>
+
+</html>

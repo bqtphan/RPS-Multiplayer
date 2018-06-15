@@ -1,0 +1,20 @@
+body{
+    /* background: url('https://www.planwallpaper.com/static/images/4443457-cool-backgrounds.png'); */
+    background-color:grey;
+    /* background: url('/assets/images/background.png') */
+    /* text-align: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.jumbotron{
+    opacity:.9;    
+}
+h2,h3,h4,h5,h6{
+    text-align: center;
+}
+.playerWinLoss{
+    display: none;
+}
+.rpsButtons{
+    display: none;
+}
