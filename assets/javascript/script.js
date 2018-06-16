@@ -26,14 +26,15 @@ $("#submitName").on("click", function (event) {
     $(".playerWinLoss").show();
     $("#playerOne").html(playerName);
 
-    // dataRef.ref().push({
-    //     player: playerName
-    // });
-   
+    database.ref('/players/1/').set({
+        player: playerName,
+        });
 });
 
 $(".btn").on("click", function() {
     var playerOneChoice = $(this).attr("data-choice");
     console.log(playerOneChoice);
-
+    database.ref('/players/1/').push({
+        choice: playerOneChoice
+    });
 });
